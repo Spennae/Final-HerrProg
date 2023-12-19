@@ -31,6 +31,27 @@
     </dl>
 </div>
 <div>
+    <h4>Clases Inscritas</h4>
+    <hr />
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Código</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var clase in Model.Clases)
+            {
+                <tr>
+                    <td>@Html.DisplayFor(modelItem => clase.Nombre)</td>
+                    <td>@Html.DisplayFor(modelItem => clase.Codigo)</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+<div>
     <a asp-action="Edit" asp-route-id="@Model?.AlumnoId">Editar</a> |
     <a asp-action="Index">Volver al Listado</a>
 </div>

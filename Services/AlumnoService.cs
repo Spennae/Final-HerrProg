@@ -2,6 +2,8 @@ namespace FinalHerr.Services;
 
 using FinalHerr.Data;
 using FinalHerr.Models;
+using Microsoft.EntityFrameworkCore;
+
 // AlumnoService.cs
 public class AlumnoService : IAlumnoService
 {
@@ -14,14 +16,19 @@ public class AlumnoService : IAlumnoService
 
     public List<Alumno> ObtenerTodos()
     {
-        return _context.Alumno.ToList();
+        return _context.Alumno
+            .Include(a => a.Clases)  // Incluye la propiedad Clases
+            .ToList();
     }
 
     public Alumno ObtenerPorId(int id)
     {
-        return _context.Alumno.FirstOrDefault(a => a.AlumnoId == id);
+        return _context.Alumno
+                   .Include(a => a.Clases)  
+                   .FirstOrDefault(a => a.AlumnoId == id);
     }
 
+    
     public async Task CrearAlumnoAsync(Alumno alumno)
     {
         _context.Add(alumno);

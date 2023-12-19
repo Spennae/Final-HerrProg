@@ -14,10 +14,13 @@ public class ClaseService : IClaseService
         _profesorService = profesorService;
     }
 
-    public List<Clase> ObtenerTodos()
-    {
-        return _context.Clase.Include(c => c.Profesor).ToList();
-    }
+public List<Clase> ObtenerTodos()
+{
+    return _context.Clase
+        .Include(c => c.Profesor)
+        .Include(c => c.Alumnos)  
+        .ToList();
+}
 
     public Clase ObtenerPorId(int id)
     {

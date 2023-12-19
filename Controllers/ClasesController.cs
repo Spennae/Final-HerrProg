@@ -26,7 +26,7 @@ namespace FinalHerr.Controllers
         public IActionResult Index(string Filtro)
         {
             var clases = _claseService.ObtenerTodos();
-
+            
             if (!string.IsNullOrEmpty(Filtro))
             {
                 clases = _claseService.FiltrarClases(Filtro);
