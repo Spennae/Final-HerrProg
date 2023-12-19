@@ -5,11 +5,8 @@
 ## Tabla de Contenidos
 1. [Funcionalidades](#funcionalidades)
 2. [Tecnologías Utilizadas](#tecnologías-utilizadas)
-3. [Cómo Empezar](#cómo-empezar)
-4. [Configuración de la Base de Datos](#configuración-de-la-base-de-datos)
-5. [Uso](#uso)
-6. [Autorización y Roles](#autorización-y-roles)
-7. [Contribuciones](#contribuciones)
+3. [Uso](#uso)
+4. [Autorización y Roles](#autorización-y-roles)
 
 ## Funcionalidades
 
@@ -31,10 +28,3 @@
 - Secretaria: Acceso a funcionalidades de Alumnos y Profesores.
 - Administracion: Acceso a funcionalidades de Clases, Inscripción y Desinscripción.
 
-## Contribuciones
-
-1. Hacer un fork del repositorio.
-2. Crear una nueva rama: `git checkout -b nombre-de-la-funcionalidad`.
-3. Hacer commit de los cambios: `git commit -m 'Agregar nueva funcionalidad'`.
-4. Hacer push a la rama: `git push origin nombre-de-la-funcionalidad`.
-5. Enviar un pull request.
